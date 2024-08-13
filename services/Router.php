@@ -18,18 +18,30 @@
                     '/criar-noticia' => [
                         'controller' => 'NoticiaController',
                         'function' => 'createNoticia'
+                    ],
+                    '/criar-autor' => [
+                        'controller' => 'AutorController',
+                        'function' => 'createAutor'
                     ]
                 ],
                 'PUT' => [
                     '/atualizar-noticia' => [
                         'controller' => 'NoticiaController',
                         'function' => 'updateNoticia'
+                    ],
+                    '/atualizar-autor' => [
+                        'controller' => 'AutorController',
+                        'function' => 'updateAutor'
                     ]
                 ],
                 'DELETE' => [
                     '/excluir-noticia' => [
                         'controller' => 'NoticiaController',
                         'function' => 'deleteNoticia'
+                    ],
+                    '/excluir-autor' => [
+                        'controller' => 'AutorController',
+                        'function' => 'deleteAutor'
                     ]
                 ]
             ];

@@ -27,5 +27,23 @@
 
             return $autores;
         }
+
+        public function createAutor() {
+            $autorDAO = new AutorDAO();
+
+            return $autorDAO->createAutor($this);
+        }
+
+        public function updateAutor() {
+            $autorDAO = new AutorDAO();
+
+            return $autorDAO->updateAutor($this);
+        }
+
+        public function deleteAutor(){
+            $autorDAO = new AutorDAO();
+
+            return $autorDAO->deleteAutor($this);
+        }
     }
 ?>
