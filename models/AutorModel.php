@@ -45,5 +45,11 @@
 
             return $autorDAO->deleteAutor($this);
         }
+
+        public function getAutorById(noticiaModel $autor){
+            $autorDAO = new AutorDAO();
+
+            return $autorDAO->getAutorById($autor);
+        }
     }
 ?>

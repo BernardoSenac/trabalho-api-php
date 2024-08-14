@@ -12,6 +12,22 @@
                     '/autores' => [
                         'controller' => 'AutorController',
                         'function' => 'getAutores'
+                    ],
+                    '/usuarios' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'getUsuarios'
+                    ],
+                    '/noticia-id' => [
+                        'controller' => 'NoticiaController',
+                        'function' => 'getNoticiaById'
+                    ],
+                    '/autor-id' => [
+                        'controller' => 'AutorController',
+                        'function' => 'getAutorById'
+                    ],
+                    '/usuario-id' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'getUsuarioById'
                     ]
                 ],
                 'POST' => [
@@ -22,6 +38,10 @@
                     '/criar-autor' => [
                         'controller' => 'AutorController',
                         'function' => 'createAutor'
+                    ],
+                    '/criar-usuario' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'createUsuario'
                     ]
                 ],
                 'PUT' => [
@@ -32,6 +52,10 @@
                     '/atualizar-autor' => [
                         'controller' => 'AutorController',
                         'function' => 'updateAutor'
+                    ],
+                    '/atualizar-usuario' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'updateUsuario'
                     ]
                 ],
                 'DELETE' => [
@@ -42,6 +66,10 @@
                     '/excluir-autor' => [
                         'controller' => 'AutorController',
                         'function' => 'deleteAutor'
+                    ],
+                    '/excluir-usuario' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'deleteUsuario'
                     ]
                 ]
             ];

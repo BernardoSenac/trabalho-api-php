@@ -70,6 +70,24 @@
             ]);
         }
 
+        
+        public function getAutorById() {
+            $dados = json_decode(file_get_contents('php://input'), true);
+
+            if(empty($dados['idAutor']))
+                return $this->mostrarErro('Você deve informar o idAutor!');
+
+            $autorModel = new AutorModel();
+            $autor = new NoticiaModel($dados['idAutor']);
+
+            $response = $autorModel->getAutorById($autor);
+
+            return json_encode([
+                'error' => null,
+                'result' => $response
+            ]);
+        }
+
         private function mostrarErro(string $mensagem) {
             return json_encode([
                 'error' => $mensagem,

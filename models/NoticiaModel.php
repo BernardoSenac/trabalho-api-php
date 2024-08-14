@@ -56,5 +56,11 @@
 
             return $noticiaDAO->deleteNoticia($this);
         }
+
+        public function getNoticiaById(noticiaModel $noticia){
+            $noticiaDAO = new NoticiaDAO();
+
+            return $noticiaDAO->getNoticiaById($noticia);
+        }
     }
 ?>
