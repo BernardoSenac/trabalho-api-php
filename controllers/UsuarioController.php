@@ -93,6 +93,23 @@
                 'result' => true
             ]);
         }
+
+        public function getUsuarioById() {
+            $dados = json_decode(file_get_contents('php://input'), true);
+
+            if(empty($dados['idUsuario']))
+                return $this->mostrarErro('Você deve informar o idUsuario!');
+
+            $usuarioModel = new UsuarioModel();
+            $usuario = new UsuarioModel($dados['idUsuario']);
+
+            $response = $usuarioModel->getUsuarioById($usuario);
+
+            return json_encode([
+                'error' => null,
+                'result' => $response
+            ]);
+        }
         
         private function mostrarErro(string $mensagem) {
             return json_encode([

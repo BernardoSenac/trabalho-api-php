@@ -53,7 +53,7 @@
             $sql = "SELECT * FROM autor WHERE idAutor = :idAutor;";
 
             $stmt = $conexao->prepare($sql);
-            $stmt->bindValue(':idNoticia', $autor->idAutor);
+            $stmt->bindValue(':idAutor', $autor->idAutor);
             $stmt->execute();
 
             return $stmt->fetch(PDO::FETCH_ASSOC);

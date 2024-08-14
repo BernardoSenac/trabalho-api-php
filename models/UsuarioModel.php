@@ -57,5 +57,11 @@
 
             return $usuarioDAO->deleteUsuario($this);
         }
+
+        public function getUsuarioById(UsuarioModel $usuario) {
+            $usuarioDAO = new UsuarioDAO();
+
+            return $usuarioDAO->getUsuarioById($usuario);
+        }
     }
 ?>

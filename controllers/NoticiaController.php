@@ -34,7 +34,7 @@
                 $dados['imagemNoticia']
             );
 
-            $response = $noticia->create();
+            $response = $noticia->createNoticia();
 
             return json_encode([
                 'error' => null,
@@ -65,7 +65,7 @@
                 $dados['imagemNoticia']
             );
 
-            $response = $noticia->update();
+            $response = $noticia->updateNoticia();
 
             return json_encode([
                 'error' => null,
@@ -81,7 +81,7 @@
 
             $noticia = new NoticiaModel($dados['idNoticia']);
 
-            $response = $noticia->delete();
+            $response = $noticia->deleteNoticia();
 
             return json_encode([
                 'error' => null,

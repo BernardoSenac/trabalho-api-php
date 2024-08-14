@@ -39,19 +39,19 @@
             return $noticias;
         }
 
-        public function create() {
+        public function createNoticia() {
             $noticiaDAO = new NoticiaDAO();
 
             return $noticiaDAO->createNoticia($this);
         }
 
-        public function update() {
+        public function updateNoticia() {
             $noticiaDAO = new NoticiaDAO();
 
             return $noticiaDAO->updateNoticia($this);
         }
 
-        public function delete(){
+        public function deleteNoticia(){
             $noticiaDAO = new NoticiaDAO();
 
             return $noticiaDAO->deleteNoticia($this);

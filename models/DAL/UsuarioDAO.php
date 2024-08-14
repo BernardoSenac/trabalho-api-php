@@ -52,5 +52,17 @@
             
             return $stmt->execute();
         }
+
+        public function getUsuarioById(UsuarioModel $usuario) {
+            $conexao = (new Conexao())->getConexao();
+
+            $sql = "SELECT * FROM usuario WHERE idUsuario = :idUsuario;";
+
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(':idUsuario', $usuario->idUsuario);
+            $stmt->execute();
+
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
     }
 ?>

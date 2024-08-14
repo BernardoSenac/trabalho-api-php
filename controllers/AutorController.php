@@ -78,7 +78,7 @@
                 return $this->mostrarErro('Você deve informar o idAutor!');
 
             $autorModel = new AutorModel();
-            $autor = new NoticiaModel($dados['idAutor']);
+            $autor = new AutorModel($dados['idAutor']);
 
             $response = $autorModel->getAutorById($autor);
 
