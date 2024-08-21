@@ -16,18 +16,6 @@
                     '/usuarios' => [
                         'controller' => 'UsuarioController',
                         'function' => 'getUsuarios'
-                    ],
-                    '/noticia-id' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'getNoticiaById'
-                    ],
-                    '/autor-id' => [
-                        'controller' => 'AutorController',
-                        'function' => 'getAutorById'
-                    ],
-                    '/usuario-id' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'getUsuarioById'
                     ]
                 ],
                 'POST' => [
@@ -42,6 +30,22 @@
                     '/criar-usuario' => [
                         'controller' => 'UsuarioController',
                         'function' => 'createUsuario'
+                    ],
+                    '/noticia-id' => [
+                        'controller' => 'NoticiaController',
+                        'function' => 'getNoticiaById'
+                    ],
+                    '/autor-id' => [
+                        'controller' => 'AutorController',
+                        'function' => 'getAutorById'
+                    ],
+                    '/usuario-id' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'getUsuarioById'
+                    ],
+                    '/tipousuario-id' => [
+                        'controller' => 'TipoUsuarioController',
+                        'function' => 'getTipoUsuarioById'
                     ]
                 ],
                 'PUT' => [
