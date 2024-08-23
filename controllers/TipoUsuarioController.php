@@ -1,15 +1,17 @@
 <?php
-    require_once './models/UsuarioModel.php';
+    require_once './models/TipoUsuarioModel.php';
 
-    class UsuarioController {
-        public function getUsuarios() {
-            $usuarioModel = new UsuarioModel();
+    class TipoUsuarioController {
+        public function getTiposUsuario() {
+            $dados = json_decode(file_get_contents('php://input'), true);
 
-            $usuarios = $usuarioModel->getUsuarios();
+            $tipoUsuarioModel = new TipoUsuarioModel();
+
+            $response = $tipoUsuarioModel->getTiposUsuario();
 
             return json_encode([
                 'error' => null,
-                'result' => $usuarios
+                'result' => $response
             ]);
         }
 

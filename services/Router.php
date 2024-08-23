@@ -16,6 +16,10 @@
                     '/usuarios' => [
                         'controller' => 'UsuarioController',
                         'function' => 'getUsuarios'
+                    ],
+                    '/tipos-usuario' => [
+                        'controller' => 'TipoUsuarioController',
+                        'function' => 'getTiposUsuario'
                     ]
                 ],
                 'POST' => [
@@ -46,6 +50,14 @@
                     '/tipousuario-id' => [
                         'controller' => 'TipoUsuarioController',
                         'function' => 'getTipoUsuarioById'
+                    ],
+                    '/validar-email' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'validateEmail'
+                    ],
+                    '/login' => [
+                        'controller' => 'UsuarioController',
+                        'function' => 'validateUsuario'
                     ]
                 ],
                 'PUT' => [

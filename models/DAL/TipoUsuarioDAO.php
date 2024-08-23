@@ -8,10 +8,21 @@
             $sql = "SELECT * FROM tipo_usuario WHERE idTipoUsuario = :idTipoUsuario;";
 
             $stmt = $conexao->prepare($sql);
-            $stmt->bindValue(':IdTipoUsuario', $tipoUsuario->idTipoUsuario);
+            $stmt->bindValue(':idTipoUsuario', $tipoUsuario->idTipoUsuario);
             $stmt->execute();
 
             return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+
+        public function getTiposUsuario(){
+            $conexao = (new Conexao())->getConexao();
+
+            $sql = "SELECT * FROM tipo_usuario;";
+
+            $stmt = $conexao->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 ?>

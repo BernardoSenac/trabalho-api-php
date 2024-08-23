@@ -63,5 +63,17 @@
 
             return $usuarioDAO->getUsuarioById($usuario);
         }
+
+        public function getUsuarioByEmail($email) {
+            $usuarioDAO = new UsuarioDAO();
+
+            return $usuarioDAO->getUsuarioByEmail($email);
+        }
+
+        public function getUsuarioByEmailAndSenha($email, $senha){
+            $usuarioDAO = new UsuarioDAO();
+
+            return $usuarioDAO->getUsuarioByEmailAndSenha($email, $senha);
+        }
     }
 ?>

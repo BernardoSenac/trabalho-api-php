@@ -13,6 +13,12 @@
             $this->descricaoTipoUsuario = $descricaoTipoUsuario;
         }
 
+        public function getTiposUsuario(){
+            $tipoUsuarioDAO = new TipoUsuarioDAO();
+
+            return $tipoUsuarioDAO->getTiposUsuario();
+        }
+
         public function getTipoUsuarioById(TipoUsuarioModel $tipoUsuario) {
             $tipoUsuarioDAO = new TipoUsuarioDAO();
 
