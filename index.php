@@ -1,6 +1,4 @@
 <?php
-    header('Content-Type: application/json');
-
     require_once './services/Router.php';
 
     $method = $_SERVER['REQUEST_METHOD'];

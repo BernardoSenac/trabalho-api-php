@@ -5,110 +5,178 @@
         public function __construct() {
             $this->routes = [
                 'GET' => [
-                    '/noticias' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'getNoticias'
+                    '/API-usuarios' => [
+                        'controller' => 'UserController',
+                        'function' => 'getUsers'
                     ],
-                    '/autores' => [
-                        'controller' => 'AutorController',
-                        'function' => 'getAutores'
+                    '/API-produtos' => [
+                        'controller' => 'ProductController',
+                        'function' => 'getProducts'
+                    ],
+                    '/API-pedidos' => [
+                        'controller' => 'OrderController',
+                        'function' => 'getOrders'
+                    ],
+                    '/API-status' => [
+                        'controller' => 'StatusController',
+                        'function' => 'getStatuses'
+                    ],
+                    '/API-tipos-usuario' => [
+                        'controller' => 'UserTypeController',
+                        'function' => 'getUserTypes'
+                    ],
+                    '/' => [ #redireciona para a tela principal
+                        'controller' => 'telasController',
+                        'function' => 'redirectToPrincipal'
+                    ],
+                    '/editar-usuario' => [
+                        'controller' => 'telasController',
+                        'function' => 'editarUsuario'
+                    ],
+                    '/editar-produto' => [
+                        'controller' => 'telasController',
+                        'function' => 'editarProduto'
+                    ],
+                    '/cadastrar-usuario' => [
+                        'controller' => 'telasController',
+                        'function' => 'cadastrarUsuario'
+                    ],
+                    '/cadastrar-produto' => [
+                        'controller' => 'telasController',
+                        'function' => 'cadastrarProduto'
+                    ],
+                    '/principal' => [
+                        'controller' => 'telasController',
+                        'function' => 'principal'
                     ],
                     '/usuarios' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'getUsuarios'
+                        'controller' => 'telasController',
+                        'function' => 'usuarios'
                     ],
-                    '/tipos-usuario' => [
-                        'controller' => 'TipoUsuarioController',
-                        'function' => 'getTiposUsuario'
+                    '/produtos' => [
+                        'controller' => 'telasController',
+                        'function' => 'produtos'
+                    ],
+                    '/pedidos-usuario' => [
+                        'controller' => 'telasController',
+                        'function' => 'pedidosUsuario'
                     ]
                 ],
                 'POST' => [
-                    '/criar-noticia' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'createNoticia'
+                    '/API-buscar-tipo-usuario' => [
+                        'controller' => 'UserTypeController',
+                        'function' => 'getUserTypeById'
                     ],
-                    '/criar-autor' => [
-                        'controller' => 'AutorController',
-                        'function' => 'createAutor'
+                    '/API-cadastrar-usuario' => [
+                        'controller' => 'UserController',
+                        'function' => 'createUser'
                     ],
-                    '/criar-usuario' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'createUsuario'
+                    '/API-cadastrar-produto' => [
+                        'controller' => 'ProductController',
+                        'function' => 'createProduct'
                     ],
-                    '/noticia-id' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'getNoticiaById'
+                    '/API-cadastrar-pedido' => [
+                        'controller' => 'OrderController',
+                        'function' => 'createOrder'
                     ],
-                    '/autor-id' => [
-                        'controller' => 'AutorController',
-                        'function' => 'getAutorById'
+                    '/API-cadastrar-item-pedido' => [
+                        'controller' => 'OrderItemController',
+                        'function' => 'createOrderItem'
                     ],
-                    '/usuario-id' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'getUsuarioById'
+                    '/API-usuario' => [
+                        'controller' => 'UserController',
+                        'function' => 'getUserById'
                     ],
-                    '/tipousuario-id' => [
-                        'controller' => 'TipoUsuarioController',
-                        'function' => 'getTipoUsuarioById'
+                    '/API-produto' => [
+                        'controller' => 'ProductController',
+                        'function' => 'getProductById'
                     ],
-                    '/validar-email' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'validateEmail'
+                    '/API-pedido' => [
+                        'controller' => 'OrderController',
+                        'function' => 'getOrderById'
                     ],
-                    '/login' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'validateUsuario'
-                    ]
+                    '/API-pedidos-pessoa' => [
+                        'controller' => 'OrderController',
+                        'function' => 'getOrdersByUserId'
+                    ],
+                    '/API-itens-pedido' => [
+                        'controller' => 'OrderItemController',
+                        'function' => 'getOrderItemsById'
+                    ],
+                    '/API-valor-total-pedido' => [
+                        'controller' => 'OrderItemController',
+                        'function' => 'getOrderPriceByOrderId'
+                    ],
+                    '/API-status' => [
+                        'controller' => 'StatusController',
+                        'function' => 'getStatusById'
+                    ]  
                 ],
                 'PUT' => [
-                    '/atualizar-noticia' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'updateNoticia'
+                    '/API-editar-usuario' => [
+                        'controller' => 'UserController',
+                        'function' => 'updateUser'
                     ],
-                    '/atualizar-autor' => [
-                        'controller' => 'AutorController',
-                        'function' => 'updateAutor'
+                    '/API-editar-produto' => [
+                        'controller' => 'ProductController',
+                        'function' => 'updateProduct'
                     ],
-                    '/atualizar-usuario' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'updateUsuario'
+                    '/API-editar-pedido' => [
+                        'controller' => 'OrderController',
+                        'function' => 'updateOrder'
+                    ],
+                    '/API-editar-item-pedido' => [
+                        'controller' => 'OrderItemController',
+                        'function' => 'updateOrderItem'
+                    ],
+                    '/API-editar-status-pedido' => [
+                        'controller' => 'orderController',
+                        'function' => 'updateOrderStatusById'
                     ]
                 ],
                 'DELETE' => [
-                    '/excluir-noticia' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'deleteNoticia'
+                    '/API-excluir-usuario' => [
+                        'controller' => 'UserController',
+                        'function' => 'deleteUser'
                     ],
-                    '/excluir-autor' => [
-                        'controller' => 'AutorController',
-                        'function' => 'deleteAutor'
+                    '/API-excluir-produto' => [
+                        'controller' => 'ProductController',
+                        'function' => 'deleteProduct'
                     ],
-                    '/excluir-usuario' => [
-                        'controller' => 'UsuarioController',
-                        'function' => 'deleteUsuario'
+                    '/API-excluir-pedido' => [
+                        'controller' => 'OrderController',
+                        'function' => 'deleteOrder'
+                    ],
+                    '/API-excluir-item-pedido' => [
+                        'controller' => 'OrderItemController',
+                        'function' => 'deleteOrderItem'
                     ]
                 ]
             ];
         }
 
         public function handleRequest(string $method, string $route): string {
+            // Remover parâmetros de consulta da URL
+            $route = explode('?', $route)[0];
+        
             $routeExists = !empty($this->routes[$method][$route]);
-
+        
             if (!$routeExists) {
                 return json_encode([
-                    'error' => 'Essa rota não existe!',
+                    'error' => 'Essa rota não existe!' . $route,
                     'result' => null
                 ]);
             }
-
+        
             $routeInfo = $this->routes[$method][$route];
-
+        
             $controller = $routeInfo['controller'];
             $function = $routeInfo['function'];
-
+        
             require_once __DIR__ . '/../controllers/' . $controller . '.php';
-
+        
             return (new $controller)->$function();
         }
+        
     }
 ?>
